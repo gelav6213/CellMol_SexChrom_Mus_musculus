@@ -7,8 +7,12 @@
 ### BioSample accession: N/A
 ---
 
+### Record the SRR, ERR, or DRR accession: SRR067661
+### Record its BioSample accession: SAMN00114934
 ### Study question:
 ### Accession links:
+--- 
+
 ### Galaxy steps 
 ### Screenshots
 ### Galaxy workflow
