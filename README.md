@@ -85,7 +85,8 @@ The median autosomal depth, X:A ratio, and inferred sex-chromosome complement wi
 
 ### 5. Does your result agree with the recorded sex of the WGS donor, if reported? Explain any discrepancy or uncertainty.
 
-
+No direct agreement can be established because the recorded sex of the WGS donor is not reported in the NCBI BioSample record (SAMN00114934).
+The computational results also show unusually high relative sex-chromosome depth values (over 3,000 compared with autosomes). This may result from assembly-level mapping artifacts, repetitive sequence alignment, or alternative scaffold groupings. Therefore, the results do not support a reliable XX or XY inference, and comparison with the donor's recorded sex is not possible.
 
 ### 6. Why is a chromosome-level assembly alone insufficient for a reliable read-depth sex inference?
 
