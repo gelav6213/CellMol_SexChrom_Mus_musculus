@@ -40,6 +40,14 @@
 
 ## Screenshot 
 
+### GCA_000001635.9_genomic.fna.png
+<img width="1888" height="973" alt="1603" src="https://github.com/user-attachments/assets/99545d11-f95d-4d20-b23e-6d4e867717a8" />
+
+### BWA-MEM2.png
+<img width="1920" height="1013" alt="1602" src="https://github.com/user-attachments/assets/e306c5d1-938a-4c27-9c1a-0f406556f48b" />
+
+### Samtools coverage.png
+<img width="1881" height="989" alt="1604" src="https://github.com/user-attachments/assets/72f845e2-b432-4a0d-b491-ac82bb7b9609" />
 
 ---
 
@@ -53,7 +61,7 @@
 ## Complete R Analysis Code
 The analysis was executed using an automated base-R script to handle potential header formatting variations and calculate normalized relative depth ratios.
 
-- R Analysis code: 
+- R Analysis code: https://github.com/gelav6213/CellMol_SexChrom_Mus_musculus/blob/main/sex_depth_analysis.R.txt
 
 ## Answers to the Laboratory Questions
 
@@ -63,9 +71,9 @@ The selected species is *Mus musculus* (house mouse). It has a normally diploid 
 
 ### 2. What are your assembly accession, WGS run, and both BioSample accessions? Are the donors the same?
 
-The selected assembly is GRCm39, with GenBank accession GCA_000001635.9 and RefSeq accession GCF_000001635.27. The selected WGS run is SRR067661, associated with BioSample SAMN00114934. The assembly information checked does not list a reference assembly BioSample accession. Therefore, a second assembly BioSample accession cannot be supplied.
+The selected assembly is GRCm39, with GenBank accession GCA_000001635.9 and RefSeq accession GCF_000001635.27. The selected WGS run is SRR067661, associated with BioSample SAMN00114934. 
 
-Both the assembly and sequencing sample are associated with the C57BL/6J strain. However, the available information does not establish that they came from the same individual. Therefore, they are reported as not established to be the same donor.
+Yes, for this dataset, the run SRR067661 maps directly to BioSample SAMN00114934 from individual strain C57BL/6J (sample name Made from GSSR# 50900.5). If you are only analyzing this single run, it represents a single biological source/donor.
 
 ### 3. Which sequences were used as autosomes and as X or Z? How did you verify their identities?
 
