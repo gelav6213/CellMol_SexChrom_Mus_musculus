@@ -1,0 +1,6 @@
+=== Sex Determination Summary ===
+Median Autosome Depth: 2823
+X Chromosome Relative Depth: Not Found
+Y Chromosome Relative Depth: 0
+Interpretation: Analysis completed successfully.
+
