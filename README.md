@@ -36,7 +36,7 @@
 11. Used Samtools coverage with minimum mapping quality 20 and minimum base quality 20 where supported.
 12. Downloaded the tabular coverage output as chromosome_coverage.tsv.
 
-**Galaxy history link:** [INSERT YOUR SHAREABLE GALAXY HISTORY LINK]
+**Galaxy history link:** https://usegalaxy.org/u/gelav/h/sex-dosage-mus-musculus
 
 ## Screenshot 
 
@@ -53,6 +53,8 @@
 ## Complete R Analysis Code
 The analysis was executed using an automated base-R script to handle potential header formatting variations and calculate normalized relative depth ratios.
 
+- R Analysis code: 
+
 ## Answers to the Laboratory Questions
 
 ### 1. What species did you choose, and what evidence supports a diploid XX/XY or ZZ/ZW system?
@@ -61,45 +63,27 @@ The selected species is *Mus musculus* (house mouse). It has a normally diploid 
 
 ### 2. What are your assembly accession, WGS run, and both BioSample accessions? Are the donors the same?
 
-The selected assembly is GRCm39, with GenBank accession GCA_000001635.9 and RefSeq accession GCF_000001635.27.
-
-The selected WGS run is SRR067661, associated with BioSample SAMN00114934.
-
-The assembly information checked does not list a reference assembly BioSample accession. Therefore, a second assembly BioSample accession cannot be supplied.
+The selected assembly is GRCm39, with GenBank accession GCA_000001635.9 and RefSeq accession GCF_000001635.27. The selected WGS run is SRR067661, associated with BioSample SAMN00114934. The assembly information checked does not list a reference assembly BioSample accession. Therefore, a second assembly BioSample accession cannot be supplied.
 
 Both the assembly and sequencing sample are associated with the C57BL/6J strain. However, the available information does not establish that they came from the same individual. Therefore, they are reported as not established to be the same donor.
 
 ### 3. Which sequences were used as autosomes and as X or Z? How did you verify their identities?
 
-For Mus musculus, chromosomes 1–19 were classified as autosomes (A). Chromosome X was classified as the X sex chromosome, while chromosome Y was classified separately as the Y sex chromosome.
-
-Their identities were verified using the GRCm39 NCBI assembly report and the reference sequence identifiers in the Samtools coverage output.
-
-A Z chromosome is not applicable because Mus musculus follows an XX/XY system.
+For Mus musculus, chromosomes 1–19 were classified as autosomes (A). Chromosome X was classified as the X sex chromosome, while chromosome Y was classified separately as the Y sex chromosome. Their identities were verified using the GRCm39 NCBI assembly report and the reference sequence identifiers in the Samtools coverage output. A Z chromosome is not applicable because Mus musculus follows an XX/XY system.
 
 ### 4. What are the median autosomal depth, X:A or Z:A ratio, and inferred sex-chromosome complement?
 
-The median autosomal depth, X:A ratio, and inferred sex-chromosome complement will be determined using the actual chromosome_coverage.tsv output.
-
-The X:A ratio is calculated by dividing the X-chromosome mean depth by the median autosomal mean depth.
-
-An X:A ratio near 1.0 suggests an XX-like pattern, while a ratio near 0.5 suggests an XY-like pattern. Intermediate values are considered ambiguous.
-
-The final numerical results and interpretation will be added after completing the R analysis.
+The median autosomal depth, X:A ratio, and inferred sex-chromosome complement will be determined using the actual chromosome_coverage.tsv output. The X:A ratio is calculated by dividing the X-chromosome mean depth by the median autosomal mean depth. An X:A ratio near 1.0 suggests an XX-like pattern, while a ratio near 0.5 suggests an XY-like pattern. Intermediate values are considered ambiguous.
 
 ### 5. Does your result agree with the recorded sex of the WGS donor, if reported? Explain any discrepancy or uncertainty.
 
-The agreement between the inferred chromosome complement and the recorded donor sex cannot yet be determined because the actual coverage results have not been obtained and the donor's sex must be verified in the original SRA/BioSample metadata.
 
-Potential sources of uncertainty include low sequencing depth, mapping bias, repetitive sequences, pseudoautosomal regions, and differences between the reference assembly and sequencing sample.
 
 ### 6. Why is a chromosome-level assembly alone insufficient for a reliable read-depth sex inference?
 
-A chromosome-level genome assembly provides the reference DNA sequences and chromosome organization, but it does not provide the sequencing coverage of a particular individual.
+A chromosome-level genome assembly provides the reference DNA sequences and chromosome organization, but it does not provide the sequencing coverage of a particular individual. Sex-chromosome dosage analysis requires individual WGS reads to be mapped against the reference genome. The resulting chromosome-specific read depths are then compared to the autosomal baseline. Therefore, an assembly alone cannot determine an individual's sex-chromosome complement.
 
-Sex-chromosome dosage analysis requires individual WGS reads to be mapped against the reference genome. The resulting chromosome-specific read depths are then compared to the autosomal baseline.
-
-Therefore, an assembly alone cannot determine an individual's sex-chromosome complement.
+---
 
 ## Limitations
 
@@ -111,11 +95,6 @@ Therefore, an assembly alone cannot determine an individual's sex-chromosome com
 6. Read-depth inference estimates a chromosome dosage pattern and is not a direct karyotype test.
 
 ## References
-
-1. NCBI Datasets. Mus musculus GRCm39, GCA_000001635.9.
-2. NCBI RefSeq. Mus musculus GRCm39, GCF_000001635.27.
-3. NCBI Sequence Read Archive. SRR067661 and SRX027663.
-4. NCBI BioSample. SAMN00114934.
-5. Genome Reference Consortium. Mouse reference assembly GRCm39.
-6. Samtools Coverage Documentation. https://www.htslib.org/doc/samtools-coverage.html
-7. Galaxy Project. https://usegalaxy.org
+- https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001635.27/
+- https://www.ncbi.nlm.nih.gov/sra/?term=Mus+musculus+(house+mouse)+SRX027663
+- https://usegalaxy.org
